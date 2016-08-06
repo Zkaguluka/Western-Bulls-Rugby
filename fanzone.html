@@ -56,22 +56,325 @@
 		</style>
 	</header>
 	<div class="container" style="background: aquamarine">
-		
-		<div class="row">			
-			<div class="col-sm-12 col-md-12 jumbotron">
-				<div class="text-center">
-					
-				</div>								
+		<section>
+			<!--fanzone slideshow of various promo pics-->
+			<div class="carousel slide" id="homepageSlideshow" data-ride="carousel">
+				
+				<!--indicators/ dot navigation-->
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#homepageSlideshow"></li>
+					<li data-slide-to="1" data-target="#homepageSlideshow"></li>
+					<li data-slide-to="2" data-target="#homepageSlideshow"></li>
+					<li data-slide-to="3" data-target="#homepageSlideshow"></li>				
+					<li data-slide-to="4" data-target="#homepageSlideshow"></li>
+				</ol>
+				
+				<!--slides wrapper-->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active" id="slideshowItem1">
+					<img src="images/BlueBulls2.jpg" alt="Banner 1" class="img-responsive">
+						<div class="carousel-caption">
+							<h2>slide item 1</h2>
+							<p>this is the first pic of the slideshow</p>
+						</div>
+					</div>
+					<div class="item" id="slideshowItem2">
+					<img src="images/sponsor.jpg" alt="Banner 2" class="img-responsive">
+						<div class="carousel-caption">
+							<h2>slide item 2</h2>
+							<p>this is the second pic of the slideshow</p>
+						</div>
+					</div>
+					<div class="item" id="slideshowItem3">
+					<img src="images/BlueBulls2.jpg" alt="Banner 3" class="img-responsive">
+						<div class="carousel-caption">
+							<h2>slide item 3</h2>
+							<p>this is the third pic of the slideshow</p>
+						</div>
+					</div>
+					<div class="item" id="slideshowItem4">
+					<img src="images/sponsor.jpg" alt="Banner 4" class="img-responsive">
+						<div class="carousel-caption">
+							<h2>slide item 4</h2>
+							<p>this is the fourth pic of the slideshow</p>
+						</div>
+					</div>
+					<div class="item" id="slideshowItem5">
+					<img src="images/BlueBulls2.jpg" alt="Banner 5" class="img-responsive">
+						<div class="carousel-caption">
+							<h2>slide item 5</h2>
+							<p>this is the fifth pic of the slideshow</p>
+						</div>
+					</div>
+				</div>					
+				
+				<!--controls-->
+				<a class="left carousel-control" href="#homepageSlideshow" data-slide="prev"><span class="icon-prev" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
+				<a class="right carousel-control" href="#homepageSlideshow" data-slide="next"><span class="icon-next" aria-hidden="true"></span><span class="sr-only">Next</span></a>									
+			</div>
+		</section>
+
+		<!--section having current league stats-->
+		<section>
+
+			<!--banner-intro to the section -->
+			<div class="page-header" style="background: lightskyblue;">
+				<h2 align="center">LEAGUE STATS: <small>THE WEEKEND SCHEDULE</small></h2>
+			</div>
+			<!--social media links-->
+			<div>
+				<h2 > To Do: Add floating, to-the-side, social media links</h2>	
+				<p class="divider"></p>	
 			</div>
 
-			<!--sidebar nav-->
-			<aside class="col-sm-3 col-md-3">
-				<div>
-					<a href="tickets_n_schedule.html"><img src="images/tickets.jpg" class="img-responsive"></a>
-				</div>								
-			</aside>	
-		</div>
+			<div class="row">
+				<!--Team games for the season-->
+				<div class="col-sm-12 col-md-4" style="margin-top: 20px ">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Bulls Season Fixtures</h3>
+						</div>
+						<table class="table table-condensed table-hover">
+							<tr></tr>
+							<tr></tr>							
+						</table>
+					</div>
+				</div>
+
+				<!--Games happening this weekend-->
+				<div class="col-sm-12 col-md-4" style="margin-top: 20px ">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">League Games This Weekend</h3>
+						</div>
+						<table class="table table-condensed table-hover">
+							<tr></tr>
+							<tr></tr>							
+						</table>
+					</div>
+					
+				</div>
+
+				<!--Current league standings-->
+				<div class="col-sm-12 col-md-4" style="margin-top: 20px ">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Current League Standings</h3>
+						</div>
+						<table class="table table-condensed table-hover">
+							<tr>
+								<th>Rank</th>
+								<th>Team</th>							
+								<th>Points</th>
+							</tr>
+							<tr class="success">
+								<td>1</td>
+								<td>Western Bulls <span class="badge">Q</span></td>
+								<td>44</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Team 2 <span class="badge">Q</span></td>
+								<td>43</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Team 3 <span class="badge">Q</span></td>
+								<td>42</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Team 4 <span class="badge">Q</span></td>
+								<td>41</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Team 5 <span class="badge">Q</span></td>
+								<td>40</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>Team 6 <span class="badge">Q</span></td>
+								<td>39</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>Team 7</td>
+								<td>38</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>Team 8</td>
+								<td>37</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Team 9</td>
+								<td>36</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Team 10</td>
+								<td>35</td>
+							</tr>							
+						</table>
+					</div>					
+				</div>
+			</div>
+		</section>
+
+		<!--section having team stats-->
+		<section>
+
+			<!--banner-intro to the section -->
+			<div class="page-header" style="background: lightskyblue;">
+				<h2 align="center">BULLS STATS: <small>THE BREAKDOWN</small></h2>
+			</div>
 		
+			<!--The membership subscription call to action-->
+			<div style="background: lightskyblue; margin-bottom: 5px; margin-top: 5px;">
+				<div class="jumbotron" style="background: lightskyblue;">
+					<h2 align="center">Bulls Rugby Membership: <small>123 and counting</small></h2>
+
+				</div>
+			</div>
+
+		</section>
+		
+		<!--section having Bulls stadium details-->
+		<section>
+
+			<!--banner-intro to the section -->
+			<div class="page-header" style="background: lightskyblue;">
+				<h2 align="center">OUR STADIUM: <small>THE BULL RING</small></h2>
+			</div>
+			<div class="row">
+				
+				<!--Bulls stadium details-->
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-info">
+						<div class="panel-body">
+							<div class="thumbnail">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">
+							</div>
+							<p class="navbar-text">
+								The Bull Ring, home to the Western Bulls Rugby team, is situated along the Kakamega-Kis...
+								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+							</p>							
+						</div>
+					</div>					
+				</div>
+
+				<!--Bulls stadium parking and transport-->
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-info">
+						<div class="panel-body">
+							<div class="thumbnail">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">
+							</div>
+							<p class="navbar-text">
+								We have ample parking and an organised set up to handle the safe overseeing of the various...							
+								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+							</p>
+						</div>
+					</div>					
+				</div>
+
+				<!--Bulls stadium polocies-->
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-info">
+						<div class="panel-body">
+							<div class="thumbnail">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">
+							</div>
+							<p class="navbar-text">
+								The policies and recommendations stated  are enforced at the Bull Ring to ensure  safe and...
+								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+							</p>
+						</div>
+					</div>					
+				</div>
+
+				<!--Bulls stadium hospitality arrangements-->
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-info">
+						<div class="panel-body">
+							<div class="thumbnail">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">
+							</div>
+							<p class="navbar-text">
+								Our hospitality arrangements ensure comfort for as many diverse fans as possible...								
+								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+							</p>							
+						</div>
+					</div>					
+				</div>
+			</div>
+
+			<!-- call to action for subscription -->
+			<div class="row">
+				<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1" style="background: lightskyblue; margin-bottom: 5px; margin-top: 5px; ">
+					<div class="text-center">
+							<h3>Subscribe to get the latest news about the Bulls</h3>
+
+							<form action="" class="form-inline">
+								<div class="form-group">
+									<label for="Name">Name</label>
+									<input type="text" id="homepageUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
+								</div>
+								<div class="form-group">
+									<label for="email">E-mail</label>
+									<input type="text" class="form-control" id="homepageUserEmail" placeholder="jw@example.com">&nbsp;
+								</div>
+								
+								<button type="submit" class="btn btn-info">Subscribe</button>
+								
+							</form>
+					</div>						
+				</div>				
+			</div>			
+		</section>
+
+		<!--Section with links to albums and clips-->
+		<section>
+			<div style="padding-bottom: 50px;">
+				<!--link to image gallery-->
+				<div class="col-xs-12 col-md-6">				
+					<div class="panel panel-info">	
+						<div class="panel-heading">
+							<h3 class="panel-title">Bulls Photo Gallery<button class="btn btn-success btn-xs pull-right" type="submit">Browse Entire Albums</button></h3>
+	 					</div>
+	 					<div class="panel-body">
+	 						
+	 					</div>
+					</div>	
+				</div>
+
+				<!--link to video gallery-->
+				<div class="col-xs-12 col-md-6">				
+					<div class="panel panel-info">	
+						<div class="panel-heading">
+							<h3 class="panel-title">Bulls Video Gallery<button class="btn btn-success btn-xs pull-right" type="submit">View All Clips</button></h3>
+	 					</div>
+	 					<div class="panel-body">
+	 						
+	 					</div>
+					</div>	
+				</div>
+			</div>	
+			
+		</section>
+		
+		<!--section having the club's community initiatives-->
+		<section>
+			
+			<!--banner-intro to the section -->
+			<div class="page-header" style="background: lightskyblue;">
+				<h2 align="center">THE BULLS COMMUNITY: <small>BULLS INITIATIVES</small></h2>
+			</div>
+
+
+		</section>
 	</div>
 	
 	<div class="row" >
