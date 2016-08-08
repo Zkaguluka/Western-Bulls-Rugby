@@ -11,9 +11,12 @@
 	<meta name="author" content="Zack C. Kaguluka">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/docs.min" >
+
+	<!--My custom stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/myStylesheet.css">
 	<title>Contact Us</title>
 </head>
-<body style="background: aquamarine">
+<body class="homepage-body">
 	<header>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
@@ -52,50 +55,124 @@
 			margin-bottom: 50px
 		</style>
 	</header>
-	<div class="container" style="background: lightskyblue">
+	<div class="container" style="background: aquamarine;">
 		
-		<p>l</p><p>l</p><p>l</p>
-		<h2>***		TO DO: Add padding btn the navbars and page content. 		***</h2>
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1  col-lg-10 col-lg-offset-1">
+				
+				<!--Contact details-->
+				<div >
+					<div class="jumbotron" style="background: lightskyblue; margin-bottom: 5px; margin-top: 10px;">
+						
+						<h1>Stay in touch</h1>
+						<p> <h2><strong>Address:</strong><br></h2>
+							Along Kefinco-Town center road, behind Nakumatt Holden Mall, next to Body Prime Fitness Gym.
+						</p>
 
-		<div class="row-fluid">			
-			<div class="col-sm-10 col-md-10 col-offset-1">
-				
+						<p> <h2><strong>Postal Address:</strong><br></h2>
+							<address>
+								<strong>Western Bulls Rugby,<br></strong>
+								Box 00000-50100,<br>
+								Kakamega.
+							</address>
+						</p>
 
-				
-			</div>			
-		</div>
-		<style type="text/css">
-			margin-bottom: 50px
-		</style>
-	</div>
-	
-	<div class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="container-fluid" id="footer">
-			<div class="row">				
-				<div class="col-sm-4 col-md-4">
-					<p class="navbar-text">&copy; 2016 Western Bulls Rugby <br>
-					Site built by Zack C. Kaguluka <br>
-					<a href="#">Sitemap</a> &nbsp;
-					<a href="terms_n_conditions.html">Terms & Conditions</a> &nbsp;
-					<a href="privacy_policy.html">Privacy Policy</a>			
-				</div>
-				
-				<div class="col-sm-8 col-md-8">
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a>					
-					<div class="row">
-						<div class="">
-							
-						</div>
+						<p> <h2><strong>Email:</strong><br></h2>
+							_ _ _@_ _ _.com
+						</p>
+
+						<p> <h2><strong>Telephone:</strong><br></h2>
+							0700 123 123, 0700 123 123,
+
+						<p> <h2><strong>Ticket lines:</strong><br></h2>
+							0700 123 123, 0700 123 123, 0700 123 123.
+						</p>
 					</div>
 				</div>
-				
+
+				<!-- call to action for subscription -->
+				<div class="row">
+					<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1" style="background: lightskyblue; margin-bottom: 5px; margin-top: 5px; ">
+						<div class="text-center">
+							<h3><strong> Subscribe to get the latest news about the Bulls</strong></h3>
+
+							<form action="" class="form-inline">
+								<div class="form-group">
+									<label for="Name">Name</label>
+									<input type="text" id="homepageUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
+								</div>
+								<div class="form-group">
+									<label for="email">E-mail</label>
+									<input type="text" class="form-control" id="homepageUserEmail" placeholder="jw@example.com">&nbsp;
+								</div>
+								
+								<button type="submit" class="btn btn-info">Subscribe</button>
+								
+							</form>
+						</div>						
+					</div>				
+				</div>
+
+				<!--Feedback form-->
+				<div class="form-horizontal">					
+					<div class="form-group">
+						<label for="Name" class="control-label">Your Name(required)</label><br>
+						<input type="Text" id="feedbackFormUserName" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="email" class="control-label">Your Email address(required)</label><br>
+						<input type="email" id="feedbackFormEmail" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="Subjeect" class="control-label">Subject</label><br>
+						<input type="Text" id="feedbackFormSubject" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="Message" class="control-label">Message</label><br>
+						<textarea class="form-control" id="feedbackFormMessage" rows="8"></textarea>						
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Send message</button>
+					</div>
+				</div>
+
+				<!--Bulls offices and access locations; Geotags-->
+				<div >
+					
+				</div>
 			</div>
 		</div>
+	</div>	
+	
+	<div class="row" >
+		<footer class="navbar navbar-inverse" id="footer">
+							
+			<div class="col-sm-4 col-md-4">
+				<p class="navbar-text">&copy; 2016 Western Bulls Rugby <br>
+				Site built by Zack C. Kaguluka <br>
+				<a href="#">Sitemap</a> &nbsp;
+				<a href="terms_n_conditions.html">Terms & Conditions</a> &nbsp;
+				<a href="privacy_policy.html">Privacy Policy</a>			
+			</div>
+			
+			<div class="col-sm-8 col-md-8">
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;									
+				<div class="row">
+					<div class="">
+						
+					</div>
+				</div>
+			</div>
+				
+		</footer>
 	</div>
 
 	<script src="js/jquery.min.js">	</script>
