@@ -11,9 +11,12 @@
 	<meta name="author" content="Zack C. Kaguluka">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/docs.min" >
+
+	<!--My custom stylesheet-->
+	<link rel="stylesheet" type="text/css" href="css/myStylesheet.css">
 	<title>FAQs</title>
 </head>
-<body style="background: aquamarine">
+<body class="homepage-body">
 	<header>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
@@ -54,48 +57,253 @@
 	</header>
 	<div class="container" style="background: lightskyblue">
 		
-		<p>l</p><p>l</p><p>l</p>
-		<h2>***		TO DO: Add padding btn the navbars and page content. 		***</h2>
-
-		<div class="row-fluid">			
-			<div class="col-sm-10 col-md-10 col-offset-1">
-				
-				<!--homepage slideshow of various bulls pics-->
-				
-			</div>			
+		<!--Intro n link to contact page-->
+		<div class="well">
+			<h2 style="text-align: center;"><strong>Welcome to our QnA page.</strong></h2>
+			<h3 style="text-align: center;"><strong><small>We hope to be to give satifactory answers to any inquiries you may have about the Bulls. Please feel free to seek further clarifications on queries using <a href="contact_us.html">this channels</a>.</small></strong></h3>			
 		</div>
-		<style type="text/css">
-			margin-bottom: 50px
-		</style>
-	</div>
-	
-	<div class="navbar navbar-inverse navbar-fixed-bottom">
-		<div class="container-fluid" id="footer">
-			<div class="row">				
-				<div class="col-sm-4 col-md-4">
-					<p class="navbar-text">&copy; 2016 Western Bulls Rugby <br>
-					Site built by Zack C. Kaguluka <br>
-					<a href="#">Sitemap</a> &nbsp;
-					<a href="#">Terms & Conditions</a> &nbsp;
-					<a href="#">Privacy Policy</a>			
+
+		<!--Accordion with Qs n As-->
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectible="true">
+			
+			<!--panel for Q1-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionOne">
+					<h3 class="panel-title">
+						<a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne">Question 1: Do you offer group tickets?</a>
+					</h3>
 				</div>
-				
-				<div class="col-sm-8 col-md-8">
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="#"> <img src="images/grind.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a>					
-					<div class="row">
-						<div class="">
-							
-						</div>
+
+				<div class="panel-collapse collapse in" id="collapseOne" role="tabpanel" aria-labelledby="questionOne">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 					</div>
 				</div>
-				
 			</div>
+			
+			<!--panel for Q2-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionTwo">
+					<h3 class="panel-title">
+						<a href="#collapseTwo" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseTwo">Question 2: Do you offer ticket refunds? If so, how does it work?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseTwo" role="tabpanel" aria-labelledby="questionTwo">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q3-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionThree">
+					<h3 class="panel-title">
+						<a href="#collapseThree" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseThree">Question 3: How do I join the club as a player?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseThree" role="tabpanel" aria-labelledby="questionThree">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q4-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionFour">
+					<h3 class="panel-title">
+						<a href="#collapseFour" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseFour">Question 4: How do I become a Bulls Club Member? What are the benefits?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseFour" role="tabpanel" aria-labelledby="questionFour">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q5-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionFive">
+					<h3 class="panel-title">
+						<a href="#collapseFive" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseFive">Question 5: Do you offer hospitality arrangements for the physically handicapped? how?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseFive" role="tabpanel" aria-labelledby="questionFive">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q6-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionSix">
+					<h3 class="panel-title">
+						<a href="#collapseSix" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseSix">Question 6: How do I access the club gym? What are the rates and services offered?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseSix" role="tabpanel" aria-labelledby="questionSix">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q7-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionSeven">
+					<h3 class="panel-title">
+						<a href="#collapseSeven" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseSeven">Question 7: How do I get a business stand at the Bull Ring on game days?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseSeven" role="tabpanel" aria-labelledby="questionSeven">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q8-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionEight">
+					<h3 class="panel-title">
+						<a href="#collapseEight" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseEight">Question 8: Do you offer ticket refunds? If so, how does it work?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseEight" role="tabpanel" aria-labelledby="questionEight">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q9-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionNine">
+					<h3 class="panel-title">
+						<a href="#collapseNine" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseNine">Question 9: Do you offer ticket refunds? If so, how does it work?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseNine" role="tabpanel" aria-labelledby="questionNine">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q10-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionTen">
+					<h3 class="panel-title">
+						<a href="#collapseTen" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseTen">Question 10: Do you offer ticket refunds? If so, how does it work?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseTen" role="tabpanel" aria-labelledby="questionTen">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q11-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionEleven">
+					<h3 class="panel-title">
+						<a href="#collapseEleven" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseEleven">Question 11: Do you offer ticket refunds? If so, how does it work?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseEleven" role="tabpanel" aria-labelledby="questionEleven">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--panel for Q12-->
+			<div class="panel panel-success">
+				<div class="panel-heading" role="tab" id="questionTwelve">
+					<h3 class="panel-title">
+						<a href="#collapseTwelve" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseTwelve">Question 12: Do you offer ticket refunds? If so, how does it work?</a>
+					</h3>
+				</div>
+
+				<div class="panel-collapse collapse" id="collapseTwelve" role="tabpanel" aria-labelledby="questionTwelve">
+					<div class="panel-body">
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+
+						<p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
+
+		<!--Outro n link to contact page-->
+		<div class="well">			
+			<h3 style="text-align: center;"><strong><small>We strive to give satifactory answers to any inquiries you may have about the Bulls.<br> Please feel free to seek further clarifications on queries using <a href="contact_us.html">this channels</a>.</small></strong></h3>			
+		</div>
+
+	</div>
+	
+	<div class="row" >
+		<footer class="navbar navbar-inverse" id="footer">
+							
+			<div class="col-sm-4 col-md-4">
+				<p class="navbar-text">&copy; 2016 Western Bulls Rugby <br>
+				Site built by Zack C. Kaguluka <br>
+				<a href="#">Sitemap</a> &nbsp;
+				<a href="terms_n_conditions.html">Terms & Conditions</a> &nbsp;
+				<a href="privacy_policy.html">Privacy Policy</a>			
+			</div>
+			
+			<div class="col-sm-8 col-md-8">
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;									
+				<div class="row">
+					<div class="">
+						
+					</div>
+				</div>
+			</div>
+				
+		</footer>
 	</div>
 
 	<script src="js/jquery.min.js">	</script>
