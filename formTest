@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>formTest</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="assets/css/docs.min" >	 -->
+	
+</head>
+<body>
+	<div class="container" style="background: aquamarine;">
+		
+		<!--Feedback form-->
+		<div class="jumbotron" style="background: lightskyblue;">
+			<div >
+				<h3 style="text-align: center;"><strong>We would love to here any suggestions you may have.<br><small>Just fill the form below and we will get back to you as soon as possible.<br>
+				PS: Please fill in all fields</small></strong></h3>
+			</div>
+
+			<form action="connect2.php" method="post" id="feedbackForm" class="form-horizontal">					
+				<div id="nameDiv" class="form-group">
+					<label for="Name" class="control-label">Your Name</label><br>
+					<input type="Text" id="feedbackFormUserName" name="feedbackFormUserName" class="form-control">
+				</div>
+
+				<div id="emaildiv" class="form-group">
+					<label for="email" class="control-label">Your Email address</label><br>
+					<input type="email" id="feedbackFormEmail" name="feedbackFormEmail" class="form-control">
+				</div>
+
+				<div id="subjectDiv" class="form-group">
+					<label for="Subjeect" class="control-label">Subject</label><br>
+					<input type="Text" id="feedbackFormSubject" name="feedbackFormSubject" class="form-control">
+				</div>
+
+				<div id="messageDiv" class="form-group">
+					<label for="Message" class="control-label">Message</label><br>
+					<textarea class="form-control" id="feedbackFormMessage" name="feedbackFormMessage" rows="8"></textarea>						
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Send message</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<script type="text/javascript" script src="js/bootstrap.min.js" ></script>		
+	<script type="text/javascript" src="js/jquery.min.js"></script>	
+	<script type="text/javascript" src="js/bullsJs.js" ></script>
+</body>
+</html>

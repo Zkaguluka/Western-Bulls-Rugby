@@ -219,22 +219,23 @@
 						<div class="text-center">
 							<h3><strong> Subscribe to get the latest news about the Bulls, competitions and more!</strong></h3>
 
-							<form action="" method="post" id="homepageSubscriptionForm" class="form-inline">
+							<form action="connect.php" method="post" id="homepageSubscriptionForm"
+							 class="form-inline">
 								<div class="form-group">
 									<label for="Name">Your name</label>
-									<input type="text" id="homepageUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
+									<input type="text" id="homepageUserName" name="homepageUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
 								</div>
 								<div class="form-group">
 									<label for="email">E-mail address</label>
-									<input type="text" class="form-control" id="homepageUserEmail" placeholder="jw@example.com">&nbsp;
+									<input type="text" class="form-control" id="homepageUserEmail" name="homepageUserEmail" placeholder="jw@example.com">&nbsp;
 								</div>
 								
-								<button type="submit" id="homepageSubscribeButton" class="btn btn-info">Subscribe</button>
+								<button type="submit" id="homepageSubscribeButton"
+								name="subscribe" class="btn btn-info">Subscribe</button>
 								
 							</form>
 							
-							<p id="formParagraph"></p>
-
+							<p id="formParagraph"></p>					
 							<p><br><strong> Also feel free to contact us via<a href="contact_us.html"> this channels.</a> </strong></p>
 						</div>						
 					</div>				
@@ -291,9 +292,9 @@
 				
 		</footer>
 	</div>
-	
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>		
 	<script type="text/javascript" src="js/bullsJs.js" ></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" script src="js/bootstrap.min.js" >	</script>
 </body>
 </html>
