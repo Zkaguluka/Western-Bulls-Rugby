@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,16 +26,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="images/logo.jpg"  width="120" height="90" alt="Western Bulls Rugby"></a>
+				<img src="images/logo.jpg" class="navbar-brand" width="120" height="90" alt="Western Bulls Rugby">
 			</div>
 					
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="index.html">Bulls Rugby</a></li>				
-					<li><a href="tickets_n_schedule.html">Tickets & Schedule</a></li>
+					<li><a href="ticket_info.html">Ticket Info</a></li>
 					<li class="active"><a href="#">Fan Zone</a></li>				
 					<li><a href="about_us.html">About Us</a></li>			
-					<li><a href="http://localhost/BullsShop/">Shop</a></li>		
+					<li><a href="http://localhost/BullsShop/" target=”_blank”>Shop</a></li>		
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 							More<span class="glyphicon glyphicon-circle-arrow-down"></span>
@@ -115,7 +116,7 @@
 		</section>
 
 		<!--section having current league stats-->
-		<section>
+		<section style="margin-bottom: 100px;">
 
 			<!--banner-intro to the section -->
 			<div class="page-header" style="background: lightskyblue;">
@@ -128,19 +129,6 @@
 			</div>
 
 			<div class="row">
-				<!--Team games for the season-->
-				<div class="col-sm-12 col-md-4" style="margin-top: 20px ">
-					<div class="panel panel-info">
-						<div class="panel-heading">
-							<h3 class="panel-title">Bulls Season Fixtures</h3>
-						</div>
-						<table class="table table-condensed table-hover">
-							<tr></tr>
-							<tr></tr>							
-						</table>
-					</div>
-				</div>
-
 				<!--Games happening this weekend-->
 				<div class="col-sm-12 col-md-4" style="margin-top: 20px ">
 					<div class="panel panel-info">
@@ -148,11 +136,165 @@
 							<h3 class="panel-title">League Games This Weekend</h3>
 						</div>
 						<table class="table table-condensed table-hover">
-							<tr></tr>
-							<tr></tr>							
+							<tr>
+								<th>Match</th>
+								<th>Venue</th>
+								<th>Kick-off</th>
+							</tr>
+							<tr>
+								<td>Bulls Vs Team 9</td>
+								<td>Railways Club</td>
+								<td>04:00 PM</td>
+							</tr>
+							<tr>
+								<td>Team 3 Vs Team 1</td>
+								<td>Impala Club</td>
+								<td>04:00 PM</td>
+							</tr>
+							<tr>
+								<td>Team 7 Vs Team 4</td>
+								<td>Kisii </td>
+								<td>04:00 PM</td>
+							</tr>
+							<tr>
+								<td>Team 6 Vs Team 5</td>
+								<td>Nakuru Athletic Club</td>
+								<td>04:00 PM</td>
+							</tr>
+							<tr>
+								<td>Team 2 Vs Team 8</td>
+								<td>Kakamega Show Grounds</td>
+								<td>04:00 PM</td>
+							</tr>
+														
 						</table>
 					</div>
 					
+				</div>
+				
+				<!--Team games for the season-->
+				<div class="col-sm-12 col-md-4" style="margin-top: 20px ">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title"><a id="seasonFixtures">Bulls Season Fixtures</a></h3>
+						</div>
+						<table class="table table-condensed table-hover">
+							<tr>
+								<th>Game</th>							
+								<th>Date</th>
+								<th>Match</th>					
+								<th>Final Score</th>
+							</tr>
+							<tr class="info">
+								<td>1<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 1</td>
+								<td>10 - 00</td>
+							</tr>
+							<tr class="danger">
+								<td>2<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 2</td>
+								<td>00 - 10</td>
+							</tr>
+							<tr class="success">
+								<td>3<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 3</td>
+								<td>10 - 10</td>
+							</tr>
+							<tr class="info">
+								<td>4<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 4</td>
+								<td>10 - 00</td>
+							</tr>
+							<tr class="info">
+								<td>5<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 5</td>
+								<td>10 - 00</td>
+							</tr>
+							<tr class="info">
+								<td>6<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 6</td>
+								<td>10 - 00</td>
+							</tr>
+							<tr class="danger">
+								<td>7<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 7</td>
+								<td>00 - 10</td>
+							</tr>
+							<tr class="success">
+								<td>8<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 8</td>
+								<td>10 - 10</td>
+							</tr>
+							<tr>
+								<td>9<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Bulls Vs Team 9</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>10<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Team 1 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>11<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Team 2 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>12<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Team 3 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>13<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Team 4 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>14<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Team 5 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>15<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Team 6 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>16<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Team 7 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>17<span class="badge">H</span></td>
+								<td>00/00/0000</td>
+								<td>Team 8 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>
+							<tr>
+								<td>18<span class="badge">A</span></td>
+								<td>00/00/0000</td>
+								<td>Team 9 Vs Bulls</td>
+								<td>00 - 00</td>
+							</tr>							
+						</table>
+					</div>
 				</div>
 
 				<!--Current league standings-->
@@ -167,7 +309,7 @@
 								<th>Team</th>							
 								<th>Points</th>
 							</tr>
-							<tr class="success">
+							<tr class="info">
 								<td>1</td>
 								<td>Western Bulls <span class="badge">Q</span></td>
 								<td>44</td>
@@ -221,6 +363,10 @@
 					</div>					
 				</div>
 			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+				<a href="ticket_info.html"><img src="images/free.gif" class="img-responsive" align="middle"></a>	
+			</div>
 		</section>
 
 		<!--section having team stats-->
@@ -237,7 +383,7 @@
 
 					<!--The membership subscription call to action-->	
 					<div class="jumbotron" style="background: lightskyblue; margin-bottom: 5px; margin-top: 5px;">
-						<h2 align="center">Bulls Rugby Membership: <small>123 and counting</small></h2>
+						<h2 align="center">Bulls Rugby Membership: <small>1234 and counting</small></h2>
 					</div>
 
 					<!--The actual stats-->
@@ -253,7 +399,46 @@
 
 		<!--section with news from the rugby world-->
 		<section>
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<div class="panel panel-info">	
+						<div class="panel-heading">
+							<h2 class="panel-title" align="center">The Bulls Newsroom</h2>
+	 					</div>
+	 					<div class="panel-body">
+	 						<p align="center">The section with news from the rugby world goes here</p>
+	 					</div>
+					</div>
+				</div>
+			</div>
 
+			<!--call to action for subscription-->
+			<div class="row">
+				<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1" style="background: lightskyblue; margin-bottom: 5px; ">
+					<div class="text-center">
+						<h3><strong> Subscribe to get the latest news about the Bulls, competitions and more!</strong></h3>
+
+						<form action="connect.php" method="post" id="homepageSubscriptionForm"
+						 class="form-inline">
+							<div class="form-group">
+								<label for="Name">Your name</label>
+								<input type="text" id="homepageUserName" name="homepageUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
+							</div>
+							<div class="form-group">
+								<label for="email">E-mail address</label>
+								<input type="text" class="form-control" id="homepageUserEmail" name="homepageUserEmail" placeholder="jw@example.com">&nbsp;
+							</div>
+							
+							<button type="submit" id="homepageSubscribeButton"
+							name="subscribe" class="btn btn-info">Subscribe</button>
+							
+						</form>
+						
+						<p id="formParagraph"></p>					
+						<p><br><strong> Also feel free to contact us via<a href="contact_us.html"> this channels.</a> </strong></p>
+					</div>						
+				</div>				
+			</div>
 		</section>
 
 		<!--Section with links to albums and clips-->
@@ -292,39 +477,48 @@
 				<div class="col-xs-12 col-md-12">
 					<div class="panel panel-info">	
 						<div class="panel-heading">
-							<h2 class="panel-title" align="center">The Bulls Forum</h2>
+							<h2 class="panel-title" align="center">The Bulls Forum<br></h2>
 	 					</div>
 	 					<div class="panel-body">
-	 						<p align="center">The interactive wall for pips to post topics and opinions goes here</p>
+	 						<!--call to action for registration to the forum-->
+							<div class="row">
+								<div class="col-xs-12 col-md-12" style="background: lightskyblue; margin-bottom: 5px; ">
+									<div class="text-center">
+										<h4><strong> Not yet a member, register here!</strong></h4>
+
+										<form action="forumRegistration.php" method="post" id="forumRegistrationForm"
+										 class="form-inline">
+											<div class="form-group">
+												<label for="Name">Username</label>
+												<input type="text" id="forumUserName" name="forumUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
+											</div>
+											<div class="form-group">
+												<label for="Password">Password</label>
+												<input type="password" class="form-control" id="forumPassword" name="forumPassword" placeholder="jw@example.com">&nbsp;
+											</div>
+											<div class="form-group">
+												<label for="passwordConfirmation">Confirm Password</label>
+												<input type="password" class="form-control" id="forumPasswordConfirmation" name="forumPasswordConfirmation" placeholder="jw@example.com">&nbsp;
+											</div>
+											
+											<button type="submit" id="forumRegistrationButton"
+											name="register" class="btn btn-info">Sign up</button>
+											<p></p>
+										</form>
+									</div>						
+								</div>				
+							</div>
+
+							<p align="center">The interactive wall for pips to post topics and opinions goes here</p>
+
+							<p align="center"></p>
+
 	 					</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- call to action for subscription -->
-			<div class="row">
-				<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1" style="background: lightskyblue; margin-bottom: 5px; margin-top: 5px; ">
-					<div class="text-center">
-						<h3><strong> Subscribe to get the latest news about the Bulls, competitions and more!</strong></h3>
-
-						<form action="" class="form-inline">
-							<div class="form-group">
-								<label for="Name">Name</label>
-								<input type="text" id="homepageUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
-							</div>
-							<div class="form-group">
-								<label for="email">E-mail</label>
-								<input type="text" class="form-control" id="homepageUserEmail" placeholder="jw@example.com">&nbsp;
-							</div>
-							
-							<button type="submit" class="btn btn-info">Subscribe</button>
-							
-						</form>
-
-						<p><br><strong> Also feel free to contact us via<a href="contact_us.html"> this channels.</a> </strong></p>
-					</div>						
-				</div>				
-			</div>
+			
 		</section>
 		
 		<!--section having Bulls stadium details-->
@@ -345,10 +539,32 @@
 							</div>
 							<p class="navbar-text">
 								The Bull Ring, home to the Western Bulls Rugby team, is situated along the Kakamega-Kis...
-								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+								<button type="button" class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#stadiumDetailsModal">View More</button>
 							</p>							
 						</div>
 					</div>					
+				</div>
+				<!-- Stadium details modal with profile -->
+				<div class="modal fade" id="stadiumDetailsModal" tabindex="-1" role="dialog" aria-label="stadiumDetailsModalLabel" >
+					<div class="modal-dialog" role="document">
+						<div class="modal-content" style="background: lightskyblue;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span> </button>
+								<h3 class="modal-title" id="stadiumDetailsModalLabel"><strong>Stadium Details</strong> </h3>
+							</div>
+							<div class="modal-body">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">	
+								
+								<h3><strong>The Bull Ring</strong></h3>									
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>	
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>						
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>						
+							</div>						
+						</div>
+					</div>
 				</div>
 
 				<!--Bulls stadium parking and transport-->
@@ -360,11 +576,34 @@
 							</div>
 							<p class="navbar-text">
 								We have ample parking and an organised set up to handle the safe overseeing of the various...							
-								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+								<button type="button" class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#stadiumParkingAndTransportModal">View More</button>
 							</p>
 						</div>
 					</div>					
 				</div>
+				<!-- Stadium parking and transport details modal with profile -->
+				<div class="modal fade" id="stadiumParkingAndTransportModal" tabindex="-1" role="dialog" aria-label="stadiumParkingAndTransportModalLabel" >
+					<div class="modal-dialog" role="document">
+						<div class="modal-content" style="background: lightskyblue;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span> </button>
+								<h3 class="modal-title" id="stadiumParkingAndTransportModalLabel"><strong>Stadium Parking And Transport</strong> </h3>
+							</div>
+							<div class="modal-body">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">	
+								
+								<h3><strong>The Bull Ring Parking And Transport</strong></h3>									
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>	
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>						
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>						
+							</div>						
+						</div>
+					</div>
+				</div>
+
 
 				<!--Bulls stadium polocies-->
 				<div class="col-xs-6 col-md-3">
@@ -375,10 +614,32 @@
 							</div>
 							<p class="navbar-text">
 								The policies and recommendations stated  are enforced at the Bull Ring to ensure  safe and...
-								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+								<button type="button" class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#stadiumPoliciesModal">View More</button>
 							</p>
 						</div>
 					</div>					
+				</div>
+				<!-- Stadium policies modal with profile -->
+				<div class="modal fade" id="stadiumPoliciesModal" tabindex="-1" role="dialog" aria-label="stadiumPoliciesModalLabel" >
+					<div class="modal-dialog" role="document">
+						<div class="modal-content" style="background: lightskyblue;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span> </button>
+								<h3 class="modal-title" id="stadiumPoliciesModalLabel"><strong>Stadium Policies</strong> </h3>
+							</div>
+							<div class="modal-body">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">	
+								
+								<h3><strong>The Bull Ring Policies</strong></h3>									
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>	
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>						
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>						
+							</div>						
+						</div>
+					</div>
 				</div>
 
 				<!--Bulls stadium hospitality arrangements-->
@@ -390,14 +651,37 @@
 							</div>
 							<p class="navbar-text">
 								Our hospitality arrangements ensure comfort for as many diverse fans as possible...								
-								<button type="button" class="btn btn-success btn-xs pull-right">View More</button>
+								<button type="button" class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#stadiumHospitalityArrangementsModal">View More</button>
 							</p>							
 						</div>
 					</div>					
 				</div>
+				<!-- Stadium hospitality arrangements modal with profile -->
+				<div class="modal fade" id="stadiumHospitalityArrangementsModal" tabindex="-1" role="dialog" aria-label="stadiumHospitalityArrangementsModalLabel" >
+					<div class="modal-dialog" role="document">
+						<div class="modal-content" style="background: lightskyblue;">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span> </button>
+								<h3 class="modal-title" id="stadiumHospitalityArrangementsModalLabel"><strong>Stadium Hospitality Arrangements</strong> </h3>
+							</div>
+							<div class="modal-body">
+								<img src="images/KRU_logo.png" alt="The Bull Ring" class="img-responsive">	
+								
+								<h3><strong>The Bull Ring Hospitality Arrangements</strong></h3>									
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>	
+								<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>						
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>						
+							</div>						
+						</div>
+					</div>
+				</div>
+
 			</div>						
 		</section>
-		
+		 
 		<!--section having the club's community initiatives-->
 		<section>
 
@@ -412,7 +696,7 @@
 				<p>Charity and community support occurs in a number of ways:
 					<ul>
 						<li>With our official matchday charity partners, selected on a bi-annual basis and with a focus on matchday activations.</li>					
-						<li>By supporting community rugby programs and clubs across the state, in conjunction with NSW Rugby.</li>						
+						<li>By supporting community rugby programs and clubs across the state, in conjunction with the Kenya Rugby Union.</li>						
 					</ul>
 				</p>
 				<p>All these avenues of support include the donation of resources and time (appearances by coaches, players and our mascot) as well as through monetary-value items including memorabilia.</p>
@@ -505,22 +789,15 @@
 			<div class="col-sm-4 col-md-4">
 				<p class="navbar-text">&copy; 2016 Western Bulls Rugby <br>
 				Site built by Zack C. Kaguluka <br>
-				<a href="#">Sitemap</a> &nbsp;
-				<a href="terms_n_conditions.html">Terms & Conditions</a> &nbsp;
-				<a href="privacy_policy.html">Privacy Policy</a>			
+							
 			</div>
-			
-			<div class="col-sm-8 col-md-8">
-				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="#"> <img src="images/KRU_logo1.jpg" class="img-circle" class="img-responsive" width="90" height="90"> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;									
-				<div class="row">
-					<div class="">
-						
-					</div>
-				</div>
+			<div class="col-sm-6 col-md-6">
+			</div>
+			<div class="col-sm-2 col-md-2">
+				<a class="scrolloTop" href="#">Back to top</a><br>
+				<a href="terms_n_conditions.html">Terms & Conditions</a><br> 
+				<a href="privacy_policy.html">Privacy Policy</a>
+				<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				 -->
 			</div>
 				
 		</footer>

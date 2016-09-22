@@ -5,36 +5,38 @@
 
 	//validation in case js turned off
 	if(empty($_POST['homepageUserName']) || empty($_POST['homepageUserEmail'])){
-		echo"Please enter both your name and email address.";		
-		exit;
+		echo"Please enter both your name and email address in the previous page.";		
+		exit();
 	}
-	
-	$userName = trim($_POST['homepageUserName']);
-	$email = trim($_POST['homepageUserEmail']);
-
-	//quote the data(handle special characters)
-	if(!get_magic_quotes_gpc()){
-		$userName = addslashes($userName);
-		$email = addslashes($email);
+	if (preg_match("/^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/", $email)) {
+		$validEmail = true;
+	}else{
+		$validEmail = false;
+		echo "Please enter a valid email address on the previous page";
+		exit();
 	}
 
-	//est connect
-	@ $connect = new mysqli('localhost', 'root', '', 'bullsrugby');
+	$userName = mysqli_real_escape_string($connect, trim($_POST['homepageUserName']));
+	$email = mysqli_real_escape_string($connect, trim($_POST['homepageUserEmail']));
+
+	include_once(connectToDb.php);
+		
+	$searchUserExistanceQuery = "SELECT * FROM newslettersubscribers WHERE subscriberEmail = '".$email."' ";
+
 	
-	//validate connect
-	if(mysqli_connect_errno()){
-		echo "Error: Could not connect to the database. Please try again later.";
-		exit;
+	$result = mysqli_query($connect, $searchUserExistanceQuery);
+
+	if (mysqli_num_rows($result) == 0) {
+		$insertQuery = "INSERT INTO newslettersubscribers VALUES('', '".$userName."', '".$email."')"; 
+		
+		mysqli_query($connect, $insertQuery);
+		
+		echo "Your subscription process was succesful.";
+		mysqli_close($connect);
+		
 	}
-
-	/*$searchExistanceQuery = "SELECT * FROM newslettersubscribers WHERE  MATCH(userName, email) AGAINST ('') ";
-
-	$result = mysqli_query($connect, $searchExistanceQuery);*/
-
-	$insertQuery = "INSERT INTO newslettersubscribers(subscriberId, userName, email) VALUES('', '".$userName."', '".$email."')"; 
-	
-	mysqli_query($connect, $insertQuery);
-	
-	//echo "Your subscription process was succesful.";
-	mysqli_close($connect);	
+	else{
+		echo "Your profile already exists in the subscription list.";
+		exit();
+	}	
 ?>

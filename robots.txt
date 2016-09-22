@@ -1,0 +1,25 @@
+User-Agent: Googlebot
+Disallow: 
+Disallow: 
+Disallow: 
+Disallow:
+
+User-Agent: bingbot
+Disallow: 
+Disallow: 
+Disallow: 
+Disallow:
+
+User-Agent: Slurp
+Disallow: 
+Disallow: 
+Disallow: 
+Disallow:
+
+User-Agent: *
+Disallow: 
+Disallow: 
+Disallow: 
+Disallow:
+
+sitemap: http://www.bullsrugby.com/sitemap.xml

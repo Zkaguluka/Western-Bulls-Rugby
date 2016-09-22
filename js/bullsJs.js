@@ -4,7 +4,7 @@ $(function(){
 	subscriptionForm = $('#homepageSubscriptionForm');
 	feedbackForm = $('#feedbackForm');
 
-	//hijacking php form processing
+	/*//hijacking php form processing
 	subscriptionForm.submit(function(event) {
 
 		var userName, email;
@@ -43,7 +43,7 @@ $(function(){
 		}
 		
 		event.preventDefault();
-	});
+	});*/
 
 	feedbackForm.submit(function(event) {
 

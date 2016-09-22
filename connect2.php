@@ -8,14 +8,14 @@
 	//validation should js be turned off 
 	
 	if(empty($name) || empty($email) || empty($subject) || empty($message)){
-		echo "Please fill all fields.";
-		exit;
+		echo "Please fill all fields in the previous page.";
+		exit();
 	}
 	
-	$name = trim($_POST['feedbackFormUserName']);
-	$email = trim($_POST['feedbackFormEmail']);
-	$subject = trim($_POST['feedbackFormSubject']);
-	$message = trim($_POST['feedbackFormMessage']);
+	$name = mysqli_real_escape_string($connect, trim($_POST['feedbackFormUserName']));
+	$email = mysqli_real_escape_string($connect, trim($_POST['feedbackFormEmail']));
+	$subject = mysqli_real_escape_string($connect, trim($_POST['feedbackFormSubject']));
+	$message = mysqli_real_escape_string($connect, trim($_POST['feedbackFormMessage']));
 
 	//handle special characters
 	if (!get_magic_quotes_gpc()) {
@@ -31,7 +31,7 @@
 	//validate conn
 	if (mysqli_connect_errno()) {
 		echo "An error occured. Could not connect to the database. Please try again later.";
-		exit;
+		exit();
 	}
 
 	$insertQuery = "insert into feedbacklist(messageId, name, email, subject, message) values('', '".$name."', '".$email."', '".$subject."', '".$message."')";
@@ -41,4 +41,4 @@
 	echo "Message sent succesfuly";
 	mysqli_close($conn);
 
-?>
+?
