@@ -1,3 +1,11 @@
+<?php session_start(); ?>
+<?php 
+	if (!isset($_SESSION['userId']) || ($_GET['cid']) == "") {
+		header("Location:forumTest.php");
+		exit();
+	}
+	$cid = $_GET['cid'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +19,9 @@
 	<meta name="author" content="Zack C. Kaguluka">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/docs.min" >
-
-	<!--My custom stylesheet-->
-	<link rel="stylesheet" type="text/css" href="css/myStylesheet.css">
-	<title>Our Patners</title>
+	<title>forum test</title>
 </head>
-<body class="homepage-body">
+<body style="background: lightskyblue">
 	<header>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
@@ -30,8 +35,7 @@
 					
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.html">Bulls Rugby</a></li>
-					<li><a href="our_team.html">Our Team</a></li>		
+					<li><a href="index.html">Bulls Rugby</a></li>				
 					<li><a href="ticket_info.html">Ticket Info</a></li>
 					<li><a href="fanzone.html">Fan Zone</a></li>				
 					<li><a href="about_us.html">About Us</a></li>			
@@ -44,7 +48,8 @@
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="FAQs.html">FAQs</a></li>
 							<li><a href="contact_us.html">Contact Us</a></li>
-							<li class="active"><a href="#">Our Patners</a></li>
+							<li><a href="our_staff.html">Our Team</a></li>
+							<li><a href="our_Patners.html">Our Patners</a></li>
 						</ul>
 					</li>
 
@@ -56,33 +61,61 @@
 		</style>
 	</header>
 	<div class="container" style="background: aquamarine">
-		<!--call to action for subscription-->
+		<p>1</p><p>2</p><p>3</p>
+				
 		<div class="row">
-			<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1" style="background: lightskyblue; margin-bottom: 5px; ">
-				<div class="text-center">
-					<h3><strong> Subscribe to get the latest news about the Bulls, competitions and more!</strong></h3>
+			<div class="col-xs-12 col-md-12">
+				<div class="well">
+					<!--call to action for loging in to the forum-->
+					<?php 
+						echo "<p>You are logged in as ".$_SESSION['userName']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='forumLogout.php' id='forumLoginButton' name='forumLoginButton' class='btn btn-info btn-xs'>Log out</a></p><br />";
+						
+					?>
+				</div>
+			</div>
+			
+			<hr />
 
-					<form action="connect.php" method="post" id="homepageSubscriptionForm"
-					 class="form-inline">
+			<!--call to action for adding a topic to a category-->
+			<div class="row">
+				<div class="col-xs-10 col-md-10 col-xs-offset-1 col-md-offset-1" style="background: lightskyblue; margin-bottom: 20px; ">
+					
+					<h4><strong>Submit topic here</strong></h4>
+
+					<form action="createTopicValidation.php" method="post" id="forumTopicCreationForm"
+					 class="form-horizontal">
 						<div class="form-group">
-							<label for="Name">Your name</label>
-							<input type="text" id="homepageUserName" name="homepageUserName" class="form-control" placeholder="Johnny Walker">&nbsp;
+							<label for="Name">Topic Title</label> 
+							<input type="text" id="forumTopicTitle" name="forumTopicTitle" class="form-control" placeholder="username e.g. JohnnyWalker">&nbsp;
 						</div>
 						<div class="form-group">
-							<label for="email">E-mail address</label>
-							<input type="text" class="form-control" id="homepageUserEmail" name="homepageUserEmail" placeholder="jw@example.com">&nbsp;
-						</div>
-						
-						<button type="submit" id="homepageSubscribeButton"
-						name="subscribe" class="btn btn-info">Subscribe</button>
-						
+							<label for="topicContent">Topic Content</label>
+							<textarea class="form-control" id="forumTopicContent" name="forumTopicContent" rows="3" placeholder="Your topic content goes here"></textarea>
+							<input type="hidden" name="cid" value="<?php echo($cid) ?>">	
+						</div>&nbsp;
+																
+						<button type="submit" id="forumTopicCreationButton" name="forumTopicCreationButton" class="btn btn-info">Create topic</button>					
 					</form>
 					
-					<p id="formParagraph"></p>					
-					<p><br><strong> Also feel free to contact us via<a href="contact_us.html"> this channels.</a> </strong></p>
-				</div>						
-			</div>				
+				</div>				
+			</div>
+
+			<div class="col-xs-12 col-md-12">
+				<div class="panel panel-info">	
+					<div class="panel-heading">
+						<h2 class="panel-title" align="center">The Bulls Forum: Topics<br></h2>
+					</div>
+					<div class="panel-body">						
+
+						<p align="center">The interactive wall for pips to post topics and opinions goes here</p>
+						
+
+						
+				</div>										
+			</div>
+		
 		</div>
+					
 	</div>
 	
 	<div class="row" >

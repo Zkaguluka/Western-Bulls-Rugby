@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="assets/css/docs.min" >
 	<title>forum test</title>
 </head>
-<body style="background: aquamarine">
+<body style="background: lightskyblue">
 	<header>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
@@ -53,7 +53,7 @@
 			margin-bottom: 50px
 		</style>
 	</header>
-	<div class="container" style="background: lightskyblue">
+	<div class="container" style="background: aquamarine">
 		<p>1</p><p>2</p><p>3</p>
 		<!--Section with the bulls forum-->
 		<section>
@@ -70,7 +70,7 @@
 
 							<!--call to action for log in to the forum-->
 							<?php 
-								if (!isset($_COOKIE['userId'])) {
+								if (!isset($_SESSION['userId'])) {
 									echo "<div class='row'>
 											<div class='col-xs-12 col-md-12' style='background: lightskyblue; margin-bottom: 5px; padding-top: 10px;>
 												<div class='text-center'>			
@@ -92,12 +92,63 @@
 												</div>						
 											</div>				
 										</div>";
+										echo "<!--call to action for registration to the forum-->
+										<div class='col-xs-8 col-md-8 col-xs-offset-2 col-md-offset-2' style='background: lightskyblue; margin-bottom: 5px; '>
+											<div class='text-center'>
+												<h4><strong> Not yet a member of the forum? Register here!</strong></h4>
+
+												<form action='forumRegistration.php' method='post' id='forumRegistrationForm'
+												 class='form-inline'>
+													<div class='form-group'>
+														<!-- <label for='Name'>Username</label> -->
+														<input type='text' id='forumUserName' name='forumUserName' class='form-control' placeholder='username e.g. JohnnyWalker'>&nbsp;
+													</div>
+													<div class='form-group'>
+														<!-- <label for='Password'>Password</label> -->
+														<input type='password' class='form-control' id='forumPassword' name='forumPassword' placeholder='Password'>&nbsp;
+													</div>
+													<div class='form-group'>
+														<!-- <label for='passwordConfirmation'>Confirm Password</label> -->
+														<input type='password' class='form-control' id='forumPasswordConfirmation' name='forumPasswordConfirmation' placeholder='Confirm Password'>&nbsp;
+													</div>
+													<div class='form-group'>
+																	<!-- <label for='email'>E-mail address</label> -->
+																	<input type='text' class='form-control' id='forumUserEmail' name='forumUserEmail' placeholder='email e.g. jw@example.com'>&nbsp;
+																</div>
+													
+													<button type='submit' id='forumRegistrationButton'
+													name='register' class='btn btn-info'>Sign up</button>
+													<p></p>
+												</form>
+											</div>						
+										</div>				
+									</div>";
 										
 								}
 								else{
-									echo "<p> Welcome ".$_COOKIE['userName']."</p>";
-									echo "<a href='forumLogout.php' id='forumLoginButton' name='forumLoginButton' class='btn btn-info btn-xs'>Log out</a>";
-									 
+									echo "<p> Welcome to the forum ".$_SESSION['userName']."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='forumLogout.php' id='forumLoginButton' name='forumLoginButton' class='btn btn-info btn-xs'>Log out</a></p><br /> <hr />";
+									
+
+									include_once("connectToDb.php");
+
+									$fillCategoriesQuery = "SELECT *FROM forumcategories ORDER BY categoryTitle ASC";
+									$result = mysqli_query($connect, $fillCategoriesQuery);
+									$categories = "";
+
+									if (mysqli_num_rows($result) > 0) {
+										while ($row = mysqli_fetch_assoc($result)) {
+											$cid = $row['id'];
+											$title = $row['categoryTitle'];
+											$description = $row['categoryDescription'];
+
+											$categories .= "<a href='viewForumCategories.php?cid=".$cid."'>".$title." : <font size'-1'>".$description."<br /></a>";
+
+										}
+										echo $categories;
+									}
+									else{
+										echo "There are no categories available yet.";
+									}									 
 								}
 
 							 ?>						
@@ -105,44 +156,8 @@
 	 					</div>
 					</div>
 				</div>
-
-				<!--call to action for registration to the forum-->
-				<div class="row">
-					<div class="col-xs-8 col-md-8 col-xs-offset-2 col-md-offset-2" style="background: lightskyblue; margin-bottom: 5px; ">
-						<div class="text-center">
-							<h4><strong> Not yet a member of the forum? Register here!</strong></h4>
-
-							<form action="forumRegistration.php" method="post" id="forumRegistrationForm"
-							 class="form-inline">
-								<div class="form-group">
-									<!-- <label for="Name">Username</label> -->
-									<input type="text" id="forumUserName" name="forumUserName" class="form-control" placeholder="username e.g. JohnnyWalker">&nbsp;
-								</div>
-								<div class="form-group">
-									<!-- <label for="Password">Password</label> -->
-									<input type="password" class="form-control" id="forumPassword" name="forumPassword" placeholder="Password">&nbsp;
-								</div>
-								<div class="form-group">
-									<!-- <label for="passwordConfirmation">Confirm Password</label> -->
-									<input type="password" class="form-control" id="forumPasswordConfirmation" name="forumPasswordConfirmation" placeholder="Confirm Password">&nbsp;
-								</div>
-								<div class="form-group">
-												<!-- <label for="email">E-mail address</label> -->
-												<input type="text" class="form-control" id="forumUserEmail" name="forumUserEmail" placeholder="email e.g. jw@example.com">&nbsp;
-											</div>
-								
-								<button type="submit" id="forumRegistrationButton"
-								name="register" class="btn btn-info">Sign up</button>
-								<p></p>
-							</form>
-						</div>						
-					</div>				
-				</div>
-			</div>
-
-			
-		</section>
-		
+							
+		</section>		
 	</div>
 	
 	<div class="row" >
@@ -156,7 +171,7 @@
 			<div class="col-sm-6 col-md-6">
 			</div>
 			<div class="col-sm-2 col-md-2">
-				<a class="scrolloTop" href="#">Back to top</a><br>
+				<a class="scroltoTop" href="#">Back to top</a><br>
 				<a href="terms_n_conditions.html">Terms & Conditions</a><br> 
 				<a href="privacy_policy.html">Privacy Policy</a>
 				<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				 -->

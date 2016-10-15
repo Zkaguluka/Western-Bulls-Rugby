@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	
 	if (isset($_POST['login'])) {
 
@@ -19,14 +20,14 @@
 
 		if (mysqli_num_rows($result) == 1) {
 			$row = mysqli_fetch_array($result);
-			setcookie('userId', $row['userId']);
-			setcookie('userName', $row['userName']);
+			$_SESSION['userId'] = $row['userId'];
+			$_SESSION['userName'] = $row['userName'];
 			header("Location: forumTest.php");			
 			exit();
 
 		}
 		else{
-			echo "Invalid login information. Please return to the previous page";
+			echo "The username or password you entered is invalid. Please return to the previous page and try again";
 			exit();
 		}
 						

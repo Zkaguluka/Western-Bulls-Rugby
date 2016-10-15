@@ -1,6 +1,4 @@
 <?php
-	
-	error_reporting(-1);
 
 	$userName = $_POST['forumUserName'];
 	$password = $_POST['forumPassword'];
